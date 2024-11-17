@@ -1,16 +1,5 @@
-# Basic_Dockerfile
+# ROADMAP
+This is my [roadmap.sh]() portfolio's projects list 
 
-1. Use a lightweight base image
-- FROM alpine:latest
-2. Set the default user environment variable (optional)
-- ENV USER Captain
-3. Set the command to print the user
-- CMD ["sh", "-c", "echo Hello, $USER!"]
-
-## Usage
-```
-docker build -t my_dock .
-docker run my_dock
-```
-
-## [Project URL](https://roadmap.sh/projects/basic-dockerfile)
+## DevOps
+1. [Basic Dockerfile](https://roadmap.sh/projects/basic-dockerfile) - [Solution](https://github.com/Aramxxx8691/Basic_Dockerfile)
