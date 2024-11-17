@@ -13,5 +13,4 @@ docker build -t my_dock .
 docker run my_dock
 ```
 
-## URL
-[project URL](https://github.com/Aramxxx8691/Basic_Dockerfile)
+[URL](https://github.com/Aramxxx8691/Basic_Dockerfile)
