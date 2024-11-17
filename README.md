@@ -13,6 +13,5 @@ docker build -t my_dock .
 docker run my_dock
 ```
 ### URL
-```
-https://github.com/Aramxxx8691/Basic_Dockerfile/tree/master
-```
+[link](https://github.com/Aramxxx8691/Basic_Dockerfile/tree/master)
+
