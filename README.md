@@ -1,13 +1,11 @@
 # Basic_Dockerfile
 
-- Use a lightweight base image
-FROM alpine:latest
-
-- Set the default user environment variable (optional)
-ENV USER Captain
-
-- Set the command to print the user
-CMD ["sh", "-c", "echo Hello, $USER!"]
+1. Use a lightweight base image
+- FROM alpine:latest
+2. Set the default user environment variable (optional)
+- ENV USER Captain
+3. Set the command to print the user
+- CMD ["sh", "-c", "echo Hello, $USER!"]
 
 ## Usage
 ```
