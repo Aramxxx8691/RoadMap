@@ -4,9 +4,9 @@
   any_errors_fatal: false
   become: yes
 
-#  roles:
-#    - deploy_apache_web
-#    - { role: deploy_apache_web, when: ansible_system == 'Linux' }
+  roles:
+    - deploy_apache_web
+    - { role: deploy_apache_web, when: ansible_system == 'Linux' }
 
   vars:
     mytext: "Privet Andrei"
