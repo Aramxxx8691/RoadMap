@@ -3,6 +3,7 @@
 This project is designed to automate the deployment and management of Apache web servers on both Ubuntu and RedHat-based systems using **Ansible**. It covers a range of tasks, including creating files and directories, installing and configuring Apache, deploying a custom web page, and handling server-specific configurations.
 
 ## Project Structure
+```
 ansible/
 ├── ansible.cfg          # Configuration file for Ansible
 ├── create_file.yml      # Task to create files with dynamic content
@@ -32,6 +33,7 @@ ansible/
         │   └── test.yml    # Test playbook
         └── vars
             └── main.yml    # Role-specific variables
+```
 
 ## Key Configuration Files
 ### ansible.cfg
