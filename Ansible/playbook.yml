@@ -1,0 +1,46 @@
+---
+- name: Install Apache and Upload my Web Page
+  hosts: all
+  any_errors_fatal: false
+  become: yes
+
+#  roles:
+#    - deploy_apache_web
+#    - { role: deploy_apache_web, when: ansible_system == 'Linux' }
+
+  vars:
+    mytext: "Privet Andrei"
+    admin_pass: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          35303561383036346665646261373237383139636138306531353232646430336266646663633565
+          3933353662363139303766373238393735623765646533320a343963633161343066353535323932
+          64636564303264613331313935396232616535613230393462386263326337396166623532666338
+          3564356630316165620a386366356531333863613337336464643264613737336261396437363434
+          6534
+  
+  tasks:
+    - name: Unregister Server from Load Balancer
+      shell: echo "This server {{ inventory_hostname }} was deregistered from {{ ansible_nodename }}" >> /home/log.txt
+      delegate_to: 127.0.0.1
+
+    - name: Create folders
+      import_tasks: create_folder.yml
+#    - import_tasks: create_folder.yml
+
+    - name: Create file
+      include_tasks: create_file.yml
+      vars:
+        mytext: "Hello Andrei from Linux1"
+
+    - name: Ignore
+      yum: name=treeee state=latest
+      ignore_errors: yes
+
+    - name: Res
+      shell: echo Hello World!
+      register: results
+      #failed_when: "'World' in results.stdout"
+      #failed_when: result.rc == 0
+
+    - debug:
+        var: results
